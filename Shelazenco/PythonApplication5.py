@@ -24,8 +24,7 @@ elif register_check==("no"):
         print("До свидания")
 else:
     print("Неверный ответ вводите только 'yes' или 'no'")
-
-    
+   
 data.close()
 
 
