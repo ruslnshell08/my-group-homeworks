@@ -1,13 +1,14 @@
 data=open("users.txt","a+")
+data.seek(0)
+users=data.read()
 
-l="qwerty"
-p=123
 register_check=input("Проходили ли вы регистрацию    ")
 if register_check==("yes"):
     login=input("Введите логин ")
-    if login==l:
-        password=int(input("Введите пароль"))
-        if password==p:
+    if login in users:
+        password=input("Введите пароль")
+        data.seek(0)
+        if password in users:
             print("Вы вошли в систему")
     else:
           print("Неверный логин или пароль")
@@ -24,6 +25,7 @@ elif register_check==("no"):
         print("До свидания")
 else:
     print("Неверный ответ вводите только 'yes' или 'no'")
+   
 
 data.close()
 
