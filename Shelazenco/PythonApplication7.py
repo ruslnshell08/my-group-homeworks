@@ -38,3 +38,4 @@ elif check==2:
         dcrypt = ''.join(chr(ord(x) - key) for x in dcp)
     decrypted_file=input("Enter name of decrypted file")
     decrypted(file_2,key_2,decrypted_file)
+    
